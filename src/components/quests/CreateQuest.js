@@ -1,21 +1,40 @@
 import React, { useEffect, useState } from "react";
-
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 export const CreateQuest = () => {
+    const history = useHistory()
     const [quests, createQuest] = useState([]);
+    const [pillars, setPillars] = useState([]);
     const userId = parseInt(localStorage.getItem("lu_token"))
     const [title, setTitle] = useState("")
     const [objective, setObjective] = useState("")
     const [checkedState, setCheckedState] = React.useState(
-        new Array(tags.length).fill(false)
+        new Array(pillars.length).fill(false)
     );
     const fetchQuests = () => {
-        return fetch("http://localhost:8000/quests")
+        return fetch("http://localhost:8000/quests", {
+            headers: {
+                Authorization: `Token ${localStorage.getItem("lu_token")}`,
+              },
+        })
             .then(res => res.json())
             .then((questArray) => {
                     createQuest(questArray)
                  })
     }
 
+    const fetchPillars = () => {
+        return fetch("http://localhost:8000/pillars", {
+            headers: {
+                Authorization: `Token ${localStorage.getItem("lu_token")}`,
+              },
+        })
+
+        
+            .then(res => res.json())
+    }
+    useEffect(() => {
+        fetchPillars().then((pillarArray) => setPillars(pillarArray));
+      }, []);
     const handleOnChange = (position) => {
         const copyOfCheckedState = [
             ...checkedState
@@ -30,27 +49,31 @@ export const CreateQuest = () => {
         setCheckedState(copyOfCheckedState);
     }
 
-    const addQuest = (event) => {
+    
+    const addQuest = (evt) => {
         const newQuest = {
             quest_title: title,
             quest_objective: objective,
             user: userId,
             completed: false,
-            pillars: 0   
+            pillars: checkedState   
         }
         const fetchOptions = {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `Token ${localStorage.getItem("lu_token")}`
             },
             body: JSON.stringify(newQuest)
         }
 
-        return fetch(`http://localhost:8000/quests`, fetchOptions)
+        fetch(`http://localhost:8000/quests`, fetchOptions)
             .then(response => response.json())
             .then( 
-                () => fetchQuests() 
+                () => history.push("/quests") 
             )
+            
+        
 
     }
 
@@ -70,20 +93,20 @@ export const CreateQuest = () => {
                         }} >
                 <input type="text" id="quest_objective" size="50" placeholder="Enter your goals for your quest and how you are going to accomplish it!"/>               
             </form>
-            <ul className="tags-list">
-                            {tags.map(({ description, id }, index) => {
+            <ul className="pillars-list">
+                            {pillars.map(({ label, id }, index) => {
                                 return (
                                     <li key={index}>
-                                        <div className="tags-list-item">
+                                        <div className="pillars-list-item">
                                             <div className="left-section">
                                                 <input
                                                     type="checkbox"
                                                     id={`custom-checkbox-${index}`}
-                                                    name={description}
+                                                    name={label}
                                                     value={id}
                                                     onChange={(event) => handleOnChange(event)}
                                                 />
-                                                <label htmlFor={`custom-checkbox-${index}`}>{description}</label>
+                                                <label htmlFor={`custom-checkbox-${index}`}>{label}</label>
                                             </div>
                                         </div>
                                     </li>

@@ -5,10 +5,10 @@ import { CreateQuest } from "./quests/CreateQuest"
 
 export const ApplicationViews = () => {
     return <>
-    <Route path="/quests">
+    <Route exact path="/quests">
       <QuestList/>
     </Route>
-    <Route path="/quests/create">
+    <Route exact path="/quests/create">
       <CreateQuest/>
     </Route>   
     </>

@@ -17,7 +17,7 @@ export const QuestList = () => {
   };
 
   useEffect(() => {
-    fetchQuests().then((postArray) => setQuests(postArray));
+    fetchQuests()
   }, []);
 
   const fetchQuests = () => {
@@ -26,7 +26,7 @@ export const QuestList = () => {
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
       },
-    }).then((res) => res.json());
+    }).then((res) => res.json()).then((postArray) => setQuests(postArray));;
   };
 
   return (
