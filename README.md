@@ -1,3 +1,76 @@
+<!-- Use this if you want a banner at the top
+
+    <p float="left">
+    <img src="./src/images/<name of image>.png" alt="this shows up if image doens't load" width="800" height="200">
+</p> -->
+
+# Overview
+Pillar Quest is a full stack CRUD app designed to be a positive behavioral reinforcement tool for special education.  With video game fundamentals, Pillar Quest captures the attention of children and motivates them to complete quests which will benefit their lives.     
+
+# Features
+<ul>
+    <li>User authentication</li>
+    <li>New user registration</li>
+    <li>Ability to create, read, update, and delete [add text here]></li>
+    <li></li>
+    <li></li>
+
+</ul>
+
+# User Stories
+<ul>
+    <li>As a user, I should be able to </li>
+    <li>As a user, I should be able to</li>
+    <li>As a user, I should be able to </li>
+    <li>As a user, I should be able to </li>
+</ul>
+
+<!-- Use this if you want screen shots of the app
+
+# Images from Pillar Quest
+
+### Image heading here
+<p>
+    <img src="./src/images/<image name>.png" alt="this text appears if image doesn't load" width="700" height="500">
+</p>
+
+### Image heading here
+<p>
+    <img src="./src/images/<image name>.png" alt="this text appears if image doesn't load" width="700" height="500">
+</p>
+
+### Image heading here
+<p>
+    <img src="./src/images/<image name>.png" alt="this text appears if image doesn't load" width="700" height="500">
+</p>
+
+### Image heading here
+<p>
+    <img src="./src/images/<image name>.png" alt="this text appears if image doesn't load" width="700" height="500">
+</p> 
+
+-->
+
+
+# Wireframe
+<p float="left">
+    <img src="./src/images/<name of image>.png" alt="Wireframe" width="800" height="400">
+</p>
+
+# ERD
+<p float="left">
+    <img src="./src/images/<name of image>.png" alt="ERD" width="800" height="400">
+</p> 
+
+# Technologies Used
+HTML5 / CSS / JavaScript / React / SQL / Python / Django / Git
+
+# Directions to Download 
+git clone <paste the clone SSH here>
+
+# Link to Deployed App
+<a href="<heroku app url here>" target="_blank">Pillar Quest</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
