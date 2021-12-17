@@ -66,7 +66,11 @@ Pillar Quest is a full stack CRUD app designed to be a positive behavioral reinf
 HTML5 / CSS / JavaScript / React / SQL / Python / Django / Git
 
 # Directions to Download 
-git clone <paste the clone SSH here>
+```
+git clone <paste the clone SSH from github repo here>
+npm install
+npm start
+```
 
 # Link to Deployed App
 <a href="<heroku app url here>" target="_blank">Pillar Quest</a>
