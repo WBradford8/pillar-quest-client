@@ -21,7 +21,7 @@ export const EditQuest = () => {
 })
 
   const editQuest = (quest) => {
-    return fetch(`http://localhost:8000/quests/${quest.id}`, {
+    return fetch(`https://pillar-quest.herokuapp.com/quests/${quest.id}`, {
       method: "PUT",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
@@ -32,7 +32,7 @@ export const EditQuest = () => {
   };
 
   const getSingleQuest = (id) => {
-    return fetch(`http://localhost:8000/quests/${id}`, {
+    return fetch(`https://pillar-quest.herokuapp.com/quests/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
@@ -42,7 +42,7 @@ export const EditQuest = () => {
   };
 
   const fetchQuests = () => {
-    return fetch(`http://localhost:8000/quests`, {
+    return fetch(`https://pillar-quest.herokuapp.com/quests`, {
       method: "GET",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
@@ -53,7 +53,7 @@ export const EditQuest = () => {
   };
 
   const fetchPillars = () => {
-    return fetch("http://localhost:8000/pillars", {
+    return fetch("https://pillar-quest.herokuapp.com/pillars", {
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
       },

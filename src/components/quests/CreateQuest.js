@@ -11,7 +11,7 @@ export const CreateQuest = () => {
         new Array(pillars.length).fill(false)
     );
     const fetchQuests = () => {
-        return fetch("http://localhost:8000/quests", {
+        return fetch("https://pillar-quest.herokuapp.com/quests", {
             headers: {
                 Authorization: `Token ${localStorage.getItem("lu_token")}`,
               },
@@ -23,7 +23,7 @@ export const CreateQuest = () => {
     }
 
     const fetchPillars = () => {
-        return fetch("http://localhost:8000/pillars", {
+        return fetch("https://pillar-quest.herokuapp.com/pillars", {
             headers: {
                 Authorization: `Token ${localStorage.getItem("lu_token")}`,
               },

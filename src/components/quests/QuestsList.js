@@ -9,7 +9,7 @@ export const QuestList = () => {
   const deleteQuest = (id) => {
     if (window.confirm("Are you sure you want to delete this quest?") == false)
       return;
-    fetch(`http://localhost:8000/quests/${id}`, {
+    fetch(`https://pillar-quest.herokuapp.com/quests/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
@@ -24,7 +24,7 @@ export const QuestList = () => {
   }, []);
 
   const fetchQuests = () => {
-    return fetch(`http://localhost:8000/quests?incompleted`, {
+    return fetch(`https://pillar-quest.herokuapp.com/quests?incompleted`, {
       method: "GET",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
@@ -51,7 +51,7 @@ export const QuestList = () => {
       body: JSON.stringify(newQuest),
     };
 
-    fetch(`http://localhost:8000/quests/${evt.target.id}`, fetchOptions).then(
+    fetch(`https://pillar-quest.herokuapp.com/quests/${evt.target.id}`, fetchOptions).then(
       (response) => response.json()
     );
   };

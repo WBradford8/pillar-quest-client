@@ -10,7 +10,7 @@ export const PillarView = () => {
   }, []);
 
   const fetchQuests = () => {
-    return fetch(`http://localhost:8000/quests?completed`, {
+    return fetch(`https://pillar-quest.herokuapp.com/quests?completed`, {
       method: "GET",
       headers: {
         Authorization: `Token ${localStorage.getItem("lu_token")}`,
