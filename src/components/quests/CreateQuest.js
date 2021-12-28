@@ -67,7 +67,7 @@ export const CreateQuest = () => {
             body: JSON.stringify(newQuest)
         }
 
-        fetch(`http://localhost:8000/quests`, fetchOptions)
+        fetch(`https://pillar-quest.herokuapp.com/quests`, fetchOptions)
             .then(response => response.json())
             .then( 
                 () => history.push("/quests") 
