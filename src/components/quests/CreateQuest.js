@@ -50,7 +50,7 @@ export const CreateQuest = () => {
     }
 
     
-    const addQuest = (evt) => {
+    const addQuest = () => {
         const newQuest = {
             quest_title: title,
             quest_objective: objective,
@@ -67,7 +67,7 @@ export const CreateQuest = () => {
             body: JSON.stringify(newQuest)
         }
 
-        fetch(`https://pillar-quest.herokuapp.com/quests`, fetchOptions)
+        return fetch(`https://pillar-quest.herokuapp.com/quests`, fetchOptions)
             .then(response => response.json())
             .then( 
                 () => history.push("/quests") 
@@ -115,7 +115,7 @@ export const CreateQuest = () => {
                         </ul>
             <button
                 onClick={
-                    (evt) => addQuest(evt)
+                    () => addQuest()
                 }>
                 SUBMIT
             </button>

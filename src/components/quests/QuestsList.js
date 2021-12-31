@@ -154,6 +154,7 @@ export const QuestList = () => {
                           questObject.pillars
                         );
                         history.push("/pillars");
+                        // fetchQuests();
                       }}
                     >
                       <svg
