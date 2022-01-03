@@ -169,6 +169,10 @@ export const QuestList = () => {
                         <path d="M256 48C141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208S370.4 48 256 48zm-42.7 318.9L106.7 260.3l29.9-29.9 76.8 76.8 162.1-162.1 29.9 29.9-192.1 191.9z"></path>
                       </svg>
                     </button>
+                    <div>
+                      <p>"The point of this app is to help young students gamify their daily progress.  Turn mundane tasks into 'Quests', which will benefit their life." Created by Wade Bradford</p>
+                      <p>DIRECTIONS: <br></br></p>
+                    </div>
                   </div>
                 </div>
               );
