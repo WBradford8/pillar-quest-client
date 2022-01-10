@@ -1,0 +1,32 @@
+.quests {
+    background:url("./img/quest.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+
+    text-align: center;
+    
+    }
+.card {
+    opacity: 70%;
+}
+.buttonFlex {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    }
+
+p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width:376px){
+    .quests {
+        background:url("./img/dragon.jpg");
+        background-size: contain;
+        background-repeat: repeat-y;
+    }
+}
