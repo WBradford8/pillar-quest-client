@@ -9,9 +9,9 @@ button {
     text-align: center;
     
     }
-.card {
+/* .card {
     opacity: 70%;
-}
+} */
 .buttonFlex {
     display: flex;
     justify-content: center;

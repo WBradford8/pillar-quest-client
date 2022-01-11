@@ -17,7 +17,7 @@ button {
 .card {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    opacity: 95%;
+    background-color: rgba(255, 255, 255, 0.904);
     margin-inline: 2rem;
 }
 /* questTitle {
